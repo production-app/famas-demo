@@ -1,0 +1,6 @@
+@use "../../styles/variables" as v;
+
+.title {
+  font-family: v.$primary-font;
+  font-weight: 900;
+}
