@@ -11,9 +11,12 @@ import {
   Button,
 } from "@mantine/core";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./_login.scss";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   return (
     <Container size={520} my={40}>
       <Title ta="center" className="title">
@@ -37,7 +40,7 @@ export default function Login() {
             Forgot password?
           </Anchor>
         </Group>
-        <Button fullWidth mt="xl">
+        <Button fullWidth mt="xl" onClick={() => navigate("/dashboard")}>
           Sign in
         </Button>
       </Paper>
